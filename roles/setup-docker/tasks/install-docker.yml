@@ -1,0 +1,9 @@
+---
+- name: Install docker packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io

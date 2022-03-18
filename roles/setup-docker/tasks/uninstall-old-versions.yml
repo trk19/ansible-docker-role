@@ -1,0 +1,11 @@
+---
+- name: Uninstall old docker packages if they exists
+  apt:
+    name: "{{ item }}"
+    state: absent
+  loop:
+    - docker
+    - docker-engine
+    - docker.io
+    - containerd
+    - runc

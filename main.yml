@@ -1,0 +1,10 @@
+---
+- name: Play setup-docker on vagrant box (Ubuntu 20.04.2 LTS)
+
+  hosts: webserver
+  become: true
+  gather_facts: false
+
+  tasks:
+    - import_role:
+        name: setup-docker

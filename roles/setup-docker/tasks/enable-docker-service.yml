@@ -1,0 +1,8 @@
+---
+- name: Enable docker service to start on boot
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+  loop:
+    - docker.service
+    - containerd.service

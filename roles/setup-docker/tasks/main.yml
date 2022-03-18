@@ -1,0 +1,9 @@
+---
+# tasks file for setup_docker
+
+- import_tasks: uninstall-old-versions.yml
+- import_tasks: setup-repository.yml
+- import_tasks: install-docker.yml
+- import_tasks: post-install.yml
+- import_tasks: enable-docker-service.yml
+- import_tasks: install-docker-compose.yml
